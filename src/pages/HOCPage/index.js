@@ -21,7 +21,9 @@ const NewChild =HocFun(Child)
 
 export default function Index() {
   return (
-    <div>
+    <div style={{width:'40vw'}}>
+     <h5>高阶组件</h5>
+
        <NewChild/>
     </div>
   )
