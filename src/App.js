@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       app组件
-      <ReactReduxPage/>
+      <ReactReduxPage name="wei"/>
     </div>
   );
 }

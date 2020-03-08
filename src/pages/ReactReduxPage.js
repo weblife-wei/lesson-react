@@ -23,12 +23,18 @@ class ReactReduxPage extends Component {
 
 
 //mapStateToProps  Function   把state映射到props上
-const mapStateToProps=(state)=>{
+const mapStateToProps=(state,ownProps)=>{
   console.log('state',state)
+  console.log('owmProps',ownProps)
   return {count:state}
 }
 
 //mapDispatchToProps  Functon/Object  默认注入dispatch
 
+//mergeProps
+const mergeProps=(stateProps,dispatchProps,ownProps)=>{
+   return {aaa:'111',...stateProps,...dispatchProps,...ownProps}
+}
+
 //connect 帮助组件获得store，HOC，返回了一个新的组件
-export default connect(mapStateToProps,{add})(ReactReduxPage)
+export default connect(mapStateToProps,{add},mergeProps)(ReactReduxPage)
